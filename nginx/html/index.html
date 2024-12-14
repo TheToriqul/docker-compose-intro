@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx Container Info</title>
+    <!-- Production React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <!-- Tailwind CSS production CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        window.containerInfo = {
+            containerId: 'CONTAINER_ID_PLACEHOLDER',
+            containerName: 'CONTAINER_NAME_PLACEHOLDER',
+            ipAddress: 'IP_ADDRESS_PLACEHOLDER',
+            hostname: 'docker-nginx-host',
+            nginxVersion: '<!--# echo var="nginx_version" default="unknown" -->'
+        };
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
