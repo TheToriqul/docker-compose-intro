@@ -22,12 +22,28 @@ This project demonstrates my expertise in orchestrating multi-container applicat
 
 The project implements a microservices architecture with two main services:
 
-<figure >
-  <p align="center">
-      <img src="./architecture.png" alt="Docker Compose Mastery Architecture: Multi-Container Orchestration" />
-      <p align="center">🐳 Docker Compose Mastery Architecture: Multi-Container Orchestration</p> 
-  </p>
-</figure>
+```mermaid
+graph TD
+    A[docker-compose.yml] --> B[Docker Compose]
+    B --> C[Nginx Service]
+    B --> D[Redis Service]
+    C --> E[Nginx Alpine Image]
+    D --> F[Redis Alpine Image]
+    E --> G[Nginx Container]
+    F --> H[Redis Container]
+    G --> I[Port 80:80]
+    
+    
+    style A fill:#2496ED,stroke:#fff,stroke-width:2px,color:#fff
+    style B fill:#2496ED,stroke:#fff,stroke-width:2px,color:#fff
+    style C fill:#009639,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#DC382D,stroke:#fff,stroke-width:2px,color:#fff
+    style E fill:#009639,stroke:#fff,stroke-width:2px,color:#fff
+    style F fill:#DC382D,stroke:#fff,stroke-width:2px,color:#fff
+    style G fill:#009639,stroke:#fff,stroke-width:2px,color:#fff
+    style H fill:#DC382D,stroke:#fff,stroke-width:2px,color:#fff
+    style I fill:#1F1F1F,stroke:#fff,stroke-width:2px,color:#fff
+```
 
 ## 💻 Technical Stack
 
